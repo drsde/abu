@@ -85,7 +85,7 @@ const {  state, saveCreds } =await useMultiFileAuthState('./session/'+id)
       await delay(1000 * 10);
       const output = await pastebin.createPasteFromFile(__dirname+`/session/${id}/creds.json`, "pastebin-js test", null, 1, "N")
       const ethix = await sock.sendMessage(sock.user.id, {
-        text: `Ethix-MD&` + output.split('/')[3]
+        text: `Ghost-MD&` + output.split('/')[3]
       })
       sock.groupAcceptInvite("E3PWxdvLc7ZCp1ExOCkEGp");
       await sock.sendMessage(sock.user.id, { text: `> ❌ DO NOT SHARE THIS SESSION-ID WITH ANYBODY` }, { quoted: ethix });
